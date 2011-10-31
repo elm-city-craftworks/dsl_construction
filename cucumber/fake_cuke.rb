@@ -25,7 +25,7 @@ def match(text)
 end
 
 Dir.glob("#{File.dirname(ARGV[0])}/step_definitions/*.rb") do |step_definition|
-  require_relative step_definition
+  require File.expand_path(step_definition)
 end
 
 File.foreach(ARGV[0]) do |line|
