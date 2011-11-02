@@ -14,19 +14,19 @@ class FakeMail
     attr_reader :message
 
     def from(text)
-      @message.from = text
+      message.from = text
     end
 
     def to(text)
-      @message.to = text
+      message.to = text
     end
 
     def subject(text)
-      @message.subject = text
+      message.subject = text
     end
 
     def body(text)
-      @message.body = text
+      message.body = text
     end
   end
 
@@ -34,9 +34,9 @@ class FakeMail
     attr_accessor :from, :to, :subject, :body
 
     def deliver
-      puts "Delivering a message from #{@from} to #{@to} "+
-      "with the subject '#{@subject}' and "+
-      "the body '#{@body}'"
+      puts "Delivering a message from #{from} to #{to} "+
+      "with the subject '#{subject}' and "+
+      "the body '#{body}'"
     end
   end
 end

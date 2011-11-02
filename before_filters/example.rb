@@ -30,7 +30,7 @@ class ApplicationController < BasicController
   end
 end
 
-class PersonController < ApplicationController 
+class PeopleController < ApplicationController 
   before_filter :locate_person, :only => [:show, :edit, :update]
 
   def show
@@ -54,7 +54,7 @@ class PersonController < ApplicationController
   end
 end
 
-controller = PersonController.new
+controller = PeopleController.new
 
 puts "EXECUTING SHOW"
 controller.execute(:show)
